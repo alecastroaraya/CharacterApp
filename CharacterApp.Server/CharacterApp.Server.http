@@ -1,6 +1,20 @@
-@CharacterApp.Server_HostAddress = http://localhost:5001
+@CharacterApp.Server_HostAddress = http://localhost:5000
 
-GET {{CharacterApp.Server_HostAddress}}/weatherforecast/
+### GET Request to Strapi API
+GET {{CharacterApp.Server_HostAddress}}/api/characters
 Accept: application/json
 
-###
+### POST Request to Strapi API
+POST {{CharacterApp.Server_HostAddress}}/api/characters
+Content-Type: application/json
+
+{ "data": {
+  "name": "John",
+  "lastname": "Doe",
+  "videogame": "ExampleGame",
+  "description": "A description of the character",
+  "envaname": "Example VA Name",
+  "simpreason": "Simp Reason",
+  "imageurl": "Test URL"
+  }
+}

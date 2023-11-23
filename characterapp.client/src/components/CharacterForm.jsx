@@ -21,25 +21,32 @@ const CharacterForm = () => {
 
         const apiUrl = 'http://localhost:5000/api/characters';
 
-        const formDataToSend = new FormData();
-        formDataToSend.append('name', formData.name);
-        formDataToSend.append('lastname', formData.lastname);
-        formDataToSend.append('videogame', formData.videogame);
-        formDataToSend.append('description', formData.description);
-        formDataToSend.append('envaname', formData.envaname);
-        formDataToSend.append('simpreason', formData.simpreason);
-        formDataToSend.append('imageurl', formData.imageurl);
+        const dataObj = {
+            data: {
+                name: formData.name,
+                lastname: formData.lastname,
+                videogame: formData.videogame,
+                description: formData.description,
+                envaname: formData.envaname,
+                simpreason: formData.simpreason,
+                imageurl: formData.imageurl,
+            },
+        };
 
         try {
             const response = await fetch(apiUrl, {
                 method: 'POST',
-                body: formDataToSend,
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(dataObj),
             });
 
             if (response.ok) {
                 console.log('Character created successfully');
                 // Additional logic after successful submission
             } else {
+                console.log(response);
                 console.error('Failed to create character');
             }
         } catch (error) {

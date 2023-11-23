@@ -12,7 +12,7 @@ const CharacterList = () => {
 
                 if (response.ok) {
                     const data = await response.json();
-                    setCharacters(data);
+                    setCharacters(data || []); // Ensure that data is an array or default to an empty array
                 } else {
                     console.error('Failed to fetch characters:', response.statusText);
                 }
@@ -27,7 +27,8 @@ const CharacterList = () => {
     return (
         <div>
             <h2>Existing Characters</h2>
-            {characters.length === 0 ? (
+            {console.log(characters.data)}
+            {!Array.isArray(characters) ? (
                 <p>No characters available.</p>
             ) : (
                 <ul>

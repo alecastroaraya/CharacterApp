@@ -4,13 +4,16 @@ import CharacterList from './components/CharacterList';
 
 const App = () => {
     const [viewForm, setViewForm] = useState(false);
+    const [viewList, setViewList] = useState(false);
 
     const handleAddCharacterClick = () => {
+        setViewList(false);
         setViewForm(true);
     };
 
     const handleViewCharactersClick = () => {
         setViewForm(false);
+        setViewList(true);
     };
 
     return (
@@ -20,7 +23,9 @@ const App = () => {
                 <button onClick={handleAddCharacterClick}>Add Character</button>
                 <button onClick={handleViewCharactersClick}>View Characters</button>
             </div>
-            {viewForm ? <CharacterForm /> : <CharacterList />}
+            {viewForm ? <CharacterForm /> : null}
+            {viewList ? <CharacterList /> : null}
+
         </div>
     );
 };

@@ -28,19 +28,20 @@ const CharacterList = () => {
         <div>
             <h2>Existing Characters</h2>
             {console.log(characters.data)}
-            {!Array.isArray(characters) ? (
+            {!Array.isArray(characters.data) || characters.data.length === 0 ? (
                 <p>No characters available.</p>
             ) : (
                 <ul>
-                    {characters.map((character) => (
+                    {characters.data.map((character) => (
                         <li key={character.id}>
-                            <strong>{character.name}</strong> - {character.videogame}
+                            <strong>{character.attributes.name}</strong> - {character.attributes.videogame}
                         </li>
                     ))}
                 </ul>
             )}
         </div>
     );
+
 };
 
 export default CharacterList;

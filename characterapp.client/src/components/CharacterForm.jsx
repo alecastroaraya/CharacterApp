@@ -44,7 +44,7 @@ const CharacterForm = () => {
 
             if (response.ok) {
                 console.log('Character created successfully');
-                // Additional logic after successful submission
+                
             } else {
                 console.log(response);
                 console.error('Failed to create character');

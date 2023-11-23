@@ -59,37 +59,37 @@ const CharacterForm = () => {
         <div className="form-container">
             <form onSubmit={handleSubmit}>
                 <label>
-                    Name: 
+                    Name:{'\t'}
                     <input type="text" name="name" value={formData.name} onChange={handleChange} />
                 </label>
 
                 <label>
-                    Last name: 
+                    Last name:{'\t'}
                     <input type="text" name="lastname" value={formData.lastname} onChange={handleChange} />
                 </label>
 
                 <label>
-                    From videogame: 
+                    From videogame:{'\t'}
                     <input type="text" name="videogame" value={formData.videogame} onChange={handleChange} />
                 </label>
 
                 <label>
-                    Description: 
+                    Description:{'\t'}
                     <input type="text" name="description" value={formData.description} onChange={handleChange} />
                 </label>
 
                 <label>
-                    English VA name: 
+                    English VA name:{'\t'}
                     <input type="text" name="envaname" value={formData.envaname} onChange={handleChange} />
                 </label>
 
                 <label>
-                    Why I love them: 
+                    Why I love them:{'\t'}
                     <input type="text" name="simpreason" value={formData.simpreason} onChange={handleChange} />
                 </label>
 
                 <label>
-                    Image URL: 
+                    Image URL:{'\t'}
                     <input type="text" name="imageurl" value={formData.imageurl} onChange={handleChange} />
                 </label>
 

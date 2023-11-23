@@ -34,10 +34,15 @@ const CharacterList = () => {
                     {characters.data.map((character) => (
                         <li key={character.id}>
                             <strong>{character.attributes.name}</strong> <strong>{character.attributes.lastname}</strong> <br/>
-                            {character.attributes.videogame} <br/>
-                            {character.attributes.description} <br/>
-                            {character.attributes.envaname} <br/>
-                            {character.attributes.simpreason} <br />
+                            <strong>From videogame: </strong>{character.attributes.videogame} <br/>
+                            <strong>Description: </strong>{character.attributes.description} <br/>
+                            <strong>English VA name: </strong>{character.attributes.envaname} <br/>
+                            <strong>Why I love them: </strong>{character.attributes.simpreason} <br />
+                            <img
+                                src={character.attributes.imageurl}
+                                alt="character i simp"
+                                style={{ maxWidth: '500px', maxHeight: '500px', display: 'block', margin: 'auto' }}
+                            />
                             <br />
                         </li>
                     ))}

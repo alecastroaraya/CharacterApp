@@ -55,27 +55,27 @@ const CharacterForm = () => {
             </label>
 
             <label>
-                Name:
+                Last name:
                 <input type="text" name="lastname" value={formData.lastname} onChange={handleChange} />
             </label>
 
             <label>
-                Name:
+                From videogame:
                 <input type="text" name="videogame" value={formData.videogame} onChange={handleChange} />
             </label>
 
             <label>
-                Name:
+                Description:
                 <input type="text" name="description" value={formData.description} onChange={handleChange} />
             </label>
 
             <label>
-                Name:
+                English VA name:
                 <input type="text" name="envaname" value={formData.envaname} onChange={handleChange} />
             </label>
 
             <label>
-                Name:
+                Why I love them:
                 <input type="text" name="simpreason" value={formData.simpreason} onChange={handleChange} />
             </label>
 

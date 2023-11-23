@@ -5,14 +5,14 @@ const CharacterList = () => {
 
     useEffect(() => {
         const fetchCharacters = async () => {
-            const apiUrl = 'http://localhost:5000/api/characters'; // Update with your Strapi API endpoint
+            const apiUrl = 'http://localhost:5000/api/characters';
 
             try {
                 const response = await fetch(apiUrl);
 
                 if (response.ok) {
                     const data = await response.json();
-                    setCharacters(data || []); // Ensure that data is an array or default to an empty array
+                    setCharacters(data || []);
                 } else {
                     console.error('Failed to fetch characters:', response.statusText);
                 }

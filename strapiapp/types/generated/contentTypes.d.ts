@@ -368,6 +368,7 @@ export interface ApiCharacterCharacter extends Schema.CollectionType {
     singularName: 'character';
     pluralName: 'characters';
     displayName: 'Character';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -379,7 +380,7 @@ export interface ApiCharacterCharacter extends Schema.CollectionType {
     description: Attribute.Text;
     envaname: Attribute.String;
     simpreason: Attribute.Text;
-    picture: Attribute.Media;
+    imageurl: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

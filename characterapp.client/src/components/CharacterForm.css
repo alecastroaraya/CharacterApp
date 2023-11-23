@@ -1,0 +1,19 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 10px; /* Adjust the margin as needed for vertical spacing */
+}
+
+button {
+    margin-top: 10px; /* Add margin to the button for separation */
+}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './CharacterForm.css';
 
 const CharacterForm = () => {
     const [formData, setFormData] = useState({
@@ -55,44 +56,46 @@ const CharacterForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>
-                Name:
-                <input type="text" name="name" value={formData.name} onChange={handleChange} />
-            </label>
+        <div className="form-container">
+            <form onSubmit={handleSubmit}>
+                <label>
+                    Name: 
+                    <input type="text" name="name" value={formData.name} onChange={handleChange} />
+                </label>
 
-            <label>
-                Last name:
-                <input type="text" name="lastname" value={formData.lastname} onChange={handleChange} />
-            </label>
+                <label>
+                    Last name: 
+                    <input type="text" name="lastname" value={formData.lastname} onChange={handleChange} />
+                </label>
 
-            <label>
-                From videogame:
-                <input type="text" name="videogame" value={formData.videogame} onChange={handleChange} />
-            </label>
+                <label>
+                    From videogame: 
+                    <input type="text" name="videogame" value={formData.videogame} onChange={handleChange} />
+                </label>
 
-            <label>
-                Description:
-                <input type="text" name="description" value={formData.description} onChange={handleChange} />
-            </label>
+                <label>
+                    Description: 
+                    <input type="text" name="description" value={formData.description} onChange={handleChange} />
+                </label>
 
-            <label>
-                English VA name:
-                <input type="text" name="envaname" value={formData.envaname} onChange={handleChange} />
-            </label>
+                <label>
+                    English VA name: 
+                    <input type="text" name="envaname" value={formData.envaname} onChange={handleChange} />
+                </label>
 
-            <label>
-                Why I love them:
-                <input type="text" name="simpreason" value={formData.simpreason} onChange={handleChange} />
-            </label>
+                <label>
+                    Why I love them: 
+                    <input type="text" name="simpreason" value={formData.simpreason} onChange={handleChange} />
+                </label>
 
-            <label>
-                Image URL:
-                <input type="text" name="imageurl" value={formData.imageurl} onChange={handleChange} />
-            </label>
+                <label>
+                    Image URL: 
+                    <input type="text" name="imageurl" value={formData.imageurl} onChange={handleChange} />
+                </label>
 
-            <button type="submit">Submit</button>
-        </form>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     );
 };
 

@@ -18,8 +18,8 @@ const App = () => {
 
     return (
         <div>
-            <h1>Character Management App</h1>
-            <div>
+            <h1 style={{ textAlign: "center" }}>Character Management App</h1>
+            <div style={{ textAlign: "center" }}>
                 <button onClick={handleAddCharacterClick}>Add Character</button>
                 <button onClick={handleViewCharactersClick}>View Characters</button>
             </div>

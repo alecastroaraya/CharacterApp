@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './CharacterList.css';
 
 const CharacterList = () => {
     const [characters, setCharacters] = useState([]);
@@ -25,16 +26,19 @@ const CharacterList = () => {
     }, []);
 
     return (
-        <div>
-            <h2>Existing Characters</h2>
-            {console.log(characters.data)}
+        <div className="list-container">
             {!Array.isArray(characters.data) || characters.data.length === 0 ? (
                 <p>No characters available.</p>
             ) : (
                 <ul>
                     {characters.data.map((character) => (
                         <li key={character.id}>
-                            <strong>{character.attributes.name}</strong> - {character.attributes.videogame}
+                            <strong>{character.attributes.name}</strong> <strong>{character.attributes.lastname}</strong> <br/>
+                            {character.attributes.videogame} <br/>
+                            {character.attributes.description} <br/>
+                            {character.attributes.envaname} <br/>
+                            {character.attributes.simpreason} <br />
+                            <br />
                         </li>
                     ))}
                 </ul>
